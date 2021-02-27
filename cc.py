@@ -459,9 +459,9 @@ def slow(conn,socks_type):
 		for _ in range(conn - len(socket_list)):
 			try:
 				if socks_type == 4:
-					s.set_proxy(socks.SOCKS4, str(proxy[0]), int(proxy[1]),false)
+					s.set_proxy(socks.SOCKS4, str(proxy[0]), int(proxy[1]),False)
 				if socks_type == 5:
-					s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]),false)
+					s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]),False)
 				s.settimeout(1)
 				s.connect((str(target), int(port)))
 				if int(port) == 443:
@@ -501,9 +501,9 @@ def checking(lines,socks_type,ms,rlock,):#Proxy checker coded by Leeon123
 		try:
 			s = socks.socksocket()
 			if socks_type == 4:
-				s.set_proxy(socks.SOCKS4, str(proxy[0]), int(proxy[1]),false)
+				s.set_proxy(socks.SOCKS4, str(proxy[0]), int(proxy[1]),False)
 			if socks_type == 5:
-				s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]),false)
+				s.set_proxy(socks.SOCKS5, str(proxy[0]), int(proxy[1]),False)
 			s.settimeout(ms)
 			s.connect((str(target), int(port)))
 			if protocol == "https":
